@@ -13,7 +13,7 @@ export default function MainTabs({ tabs, children }: MainTabsProps) {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <Tabs.Root className="w-full">
+    <Tabs.Root className="w-full" defaultValue="Services">
       <Tabs.List className="grid grid-cols-2 w-full">
         {tabs.map((tab) => (
           <Tabs.Trigger
