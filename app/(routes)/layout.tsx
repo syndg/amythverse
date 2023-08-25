@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MainTabs from "@/components/MainTabs";
+import TabContent from "@/components/TabContent";
 import { Card } from "@/components/ui/card";
 import { tabs } from "@/siteConfig";
 
@@ -30,7 +31,7 @@ export default function HomeLayout({
       </header>
       <div className="flex justify-center p-4">
         <Card>
-          <MainTabs tabs={tabs}>{children}</MainTabs>
+          <MainTabs tabs={tabs}> {children}</MainTabs>
         </Card>
       </div>
     </>
