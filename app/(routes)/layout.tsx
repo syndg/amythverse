@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import MainTabs from "@/components/MainTabs";
-import TabContent from "@/components/TabContent";
 import { Card } from "@/components/ui/card";
 import { tabs } from "@/siteConfig";
 
