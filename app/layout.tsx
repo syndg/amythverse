@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
-const inter = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[rgb(15,17,26)]`}>
+      <body className={`${poppins.className} bg-[rgb(15,17,26)]`}>
         {children}
       </body>
     </html>

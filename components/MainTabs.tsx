@@ -8,13 +8,14 @@ import { motion } from "framer-motion";
 interface MainTabsProps {
   tabs: Sitetabs;
   children: React.ReactNode;
+  className?: string;
 }
 
-export default function MainTabs({ tabs, children }: MainTabsProps) {
+export default function MainTabs({ tabs, children, className }: MainTabsProps) {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <Tabs.Root className="w-full" defaultValue="Services">
+    <Tabs.Root className={cn("w-full", className)} defaultValue="Services">
       <Tabs.List className="grid grid-cols-2 w-full">
         {tabs.map((tab) => (
           <Tabs.Trigger
@@ -36,7 +37,7 @@ export default function MainTabs({ tabs, children }: MainTabsProps) {
       </Tabs.List>
       <TabContent
         value={pathname === "/" ? "Services" : "Courses"}
-        className="py-8 text-center"
+        className="py-8 px-4"
       >
         {children}
       </TabContent>

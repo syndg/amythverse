@@ -30,7 +30,7 @@ export default function HomeLayout({
       </header>
       <div className="flex justify-center p-4">
         <Card>
-          <MainTabs tabs={tabs}> {children}</MainTabs>
+          <MainTabs tabs={tabs}>{children}</MainTabs>
         </Card>
       </div>
     </>
