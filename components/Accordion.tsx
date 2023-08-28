@@ -16,9 +16,9 @@ export default function Accordion({ values }: { values: AccordionType }) {
         <AccordionItem
           value={tabname}
           key={index}
-          className="border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
+          className="p-4 bg-cyan-950/40 border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
         >
-          <AccordionTrigger className="w-full bg-cyan-950/40 p-4 rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
+          <AccordionTrigger className="w-full rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
             <div className="flex justify-between items-center">
               <span className="uppercase text-[18px] font-semibold data-[state=open]:font-bold">
                 {name}
@@ -28,7 +28,7 @@ export default function Accordion({ values }: { values: AccordionType }) {
               </span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="px-4 pb-1 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
+          <AccordionContent className="pt-2 text-cyan-200/50 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
             {content}
           </AccordionContent>
         </AccordionItem>
