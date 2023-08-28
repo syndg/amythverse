@@ -1,3 +1,6 @@
+import Accordion from "@/components/Accordion";
+import { Services } from "@/siteConfig";
+
 export default function Home() {
-  return <h1 className="text-2xl">Services</h1>;
+  return <Accordion values={Services} />;
 }

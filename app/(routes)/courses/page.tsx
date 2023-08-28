@@ -1,3 +1,6 @@
-export default function Courses() {
-  return <h1 className="text-2xl">Courses</h1>;
+import Accordion from "@/components/Accordion";
+import { Courses } from "@/siteConfig";
+
+export default function CoursesPage() {
+  return <Accordion values={Courses} />;
 }
