@@ -18,7 +18,7 @@ export default function Accordion({ values }: { values: AccordionType }) {
               <span className="text-[18px]">{name}</span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="px-4 py-2 bg-cyan-950/40 rounded-b-lg">
+          <AccordionContent className="px-4 py-2 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg">
             {content}
           </AccordionContent>
         </AccordionItem>
