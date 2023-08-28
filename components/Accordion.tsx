@@ -1,11 +1,15 @@
 "use client";
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { type AccordionType } from "@/siteConfig";
+import { type SiteServices, type SiteCourses } from "@/siteConfig";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export default function Accordion({ values }: { values: AccordionType }) {
+export default function Accordion({
+  values,
+}: {
+  values: SiteServices | SiteCourses;
+}) {
   return (
     <AccordionPrimitive.Root
       className="w-full flex flex-col gap-8"
@@ -16,11 +20,11 @@ export default function Accordion({ values }: { values: AccordionType }) {
         <AccordionItem
           value={tabname}
           key={index}
-          className="p-4 bg-cyan-950/40 border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
+          className="p-3 bg-cyan-950/40 border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
         >
           <AccordionTrigger className="w-full rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
             <div className="flex justify-between items-center">
-              <span className="uppercase text-[18px] font-semibold data-[state=open]:font-bold">
+              <span className="uppercase font-sans text-[14px] sm:text-[18px] font-bold data-[state=open]:font-extrabold">
                 {name}
               </span>
               <span className="p-[2px] bg-cyan-800/30 rounded-full">
@@ -55,11 +59,7 @@ const AccordionTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn("", className)}
-      {...props}
-    >
+    <AccordionPrimitive.Trigger ref={ref} className={cn(className)} {...props}>
       {children}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
@@ -71,11 +71,7 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    ref={ref}
-    className={cn("", className)}
-    {...props}
-  >
+  <AccordionPrimitive.Content ref={ref} className={cn(className)} {...props}>
     {children}
   </AccordionPrimitive.Content>
 ));
