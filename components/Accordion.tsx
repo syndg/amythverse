@@ -2,6 +2,7 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { type AccordionType } from "@/siteConfig";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Accordion({ values }: { values: AccordionType }) {
@@ -12,13 +13,22 @@ export default function Accordion({ values }: { values: AccordionType }) {
       collapsible
     >
       {values.map(({ name, content, tabname }, index) => (
-        <AccordionItem value={tabname} key={index}>
-          <AccordionTrigger className="w-full bg-cyan-950/40 p-4 rounded-t-lg data-[state=closed]:rounded-lg border-[1.2px] border-cyan-500/30 data-[state=open]:border-cyan-500 data-[state=open]:border-b-transparent transition-all duration-200">
-            <div className="flex">
-              <span className="text-[18px]">{name}</span>
+        <AccordionItem
+          value={tabname}
+          key={index}
+          className="border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
+        >
+          <AccordionTrigger className="w-full bg-cyan-950/40 p-4 rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
+            <div className="flex justify-between items-center">
+              <span className="uppercase text-[18px] font-semibold data-[state=open]:font-bold">
+                {name}
+              </span>
+              <span className="p-[2px] bg-cyan-800/30 rounded-full">
+                <ChevronDown />
+              </span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="px-4 pb-1 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg data-[state=open]:border-b data-[state=open]:border-l data-[state=open]:border-r data-[state=open]:border-cyan-500 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
+          <AccordionContent className="px-4 pb-1 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
             {content}
           </AccordionContent>
         </AccordionItem>
