@@ -4,7 +4,6 @@ import { type Sitetabs } from "@/siteConfig";
 import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ScrollArea } from "./ui/scrollArea";
 
 interface MainTabsProps {
   tabs: Sitetabs;
@@ -17,7 +16,7 @@ export default function MainTabs({ tabs, children, className }: MainTabsProps) {
   const pathname = usePathname();
   return (
     <Tabs.Root className={cn("w-full", className)} defaultValue="Services">
-      <Tabs.List className="grid grid-cols-2 w-full">
+      <Tabs.List className="grid grid-cols-2 w-full shadow-xl shadow-gray-950/30 z-10">
         {tabs.map((tab) => (
           <Tabs.Trigger
             key={tab.name}
@@ -38,7 +37,7 @@ export default function MainTabs({ tabs, children, className }: MainTabsProps) {
       </Tabs.List>
       <TabContent
         value={pathname === "/" ? "Services" : "Courses"}
-        className="py-8 px-4"
+        className="py-5 px-4"
       >
         {children}
       </TabContent>
@@ -52,10 +51,11 @@ export function TabContent({
   ...props
 }: React.ComponentPropsWithoutRef<typeof Tabs.Content>) {
   return (
-    <Tabs.Content className={cn("w-full", className)} {...props}>
-      <ScrollArea>
-        <div>{children}</div>
-      </ScrollArea>
+    <Tabs.Content
+      className={cn("w-full h-[75vh] overflow-y-scroll", className)}
+      {...props}
+    >
+      {children}
     </Tabs.Content>
   );
 }

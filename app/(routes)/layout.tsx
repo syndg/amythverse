@@ -11,7 +11,7 @@ export default function HomeLayout({
 }) {
   return (
     <>
-      <div className="absolute inset-0 -z-10 h-screen w-screen">
+      <div className="absolute inset-0 -z-10 h-full w-full">
         <Image
           src="/bg.jpg"
           alt="Background image of a music studio"
