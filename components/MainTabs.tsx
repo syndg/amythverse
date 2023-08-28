@@ -4,6 +4,7 @@ import { type Sitetabs } from "@/siteConfig";
 import { useRouter, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { ScrollArea } from "./ui/scrollArea";
 
 interface MainTabsProps {
   tabs: Sitetabs;
@@ -52,7 +53,9 @@ export function TabContent({
 }: React.ComponentPropsWithoutRef<typeof Tabs.Content>) {
   return (
     <Tabs.Content className={cn("w-full", className)} {...props}>
-      {children}
+      <ScrollArea>
+        <div>{children}</div>
+      </ScrollArea>
     </Tabs.Content>
   );
 }

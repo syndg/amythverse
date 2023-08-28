@@ -13,12 +13,12 @@ export default function Accordion({ values }: { values: AccordionType }) {
     >
       {values.map(({ name, content, tabname }, index) => (
         <AccordionItem value={tabname} key={index}>
-          <AccordionTrigger className="w-full bg-cyan-950/40 px-4 py-2 rounded-t-lg data-[state=closed]:rounded-lg">
+          <AccordionTrigger className="w-full bg-cyan-950/40 p-4 rounded-t-lg data-[state=closed]:rounded-lg border-[1.2px] border-cyan-500/30 data-[state=open]:border-cyan-500 data-[state=open]:border-b-transparent transition-all duration-200">
             <div className="flex">
               <span className="text-[18px]">{name}</span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="px-4 py-2 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg">
+          <AccordionContent className="px-4 pb-1 bg-cyan-950/40 text-cyan-200/50 rounded-b-lg data-[state=open]:border-b data-[state=open]:border-l data-[state=open]:border-r data-[state=open]:border-cyan-500 data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
             {content}
           </AccordionContent>
         </AccordionItem>

@@ -16,7 +16,7 @@ export const Services = [
     tabname: "music-production",
   },
   {
-    name: "Songwriting; Arrangement and Composition",
+    name: "Songwriting & Composition",
     content: "Dummy placeholder text here.",
     tabname: "songwriting",
   },
