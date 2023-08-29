@@ -47,7 +47,7 @@ export const Services = [
     name: "Photography",
     content: "Dummy placeholder text here.",
     tabname: "photography",
-    listIems: [
+    listItems: [
       "Fashion",
       "Portraits",
       "Aesthetic and conceptual",

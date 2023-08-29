@@ -4,6 +4,12 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { type SiteServices, type SiteCourses } from "@/siteConfig";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
 
 export default function Accordion({
   values,
@@ -16,7 +22,7 @@ export default function Accordion({
       type="single"
       collapsible
     >
-      {values.map(({ name, content, tabname }, index) => (
+      {values.map(({ name, content, tabname, listItems }, index) => (
         <AccordionItem
           value={tabname}
           key={index}
@@ -32,8 +38,16 @@ export default function Accordion({
               </span>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="pt-2 text-cyan-200/50 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden transition-all duration-200">
-            {content}
+          <AccordionContent className="pt-3 px-4 text-cyan-200/80 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp transition-all duration-200">
+            <ul
+              className={`${poppins.className} list-disc text-[15px] sm:text-[18px]`}
+            >
+              {listItems?.map((item, index) => (
+                <li key={index} className="mb-2">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </AccordionContent>
         </AccordionItem>
       ))}
