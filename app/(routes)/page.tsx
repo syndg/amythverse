@@ -1,5 +1,7 @@
 import Accordion from "@/components/Accordion";
 import { Services } from "@/siteConfig";
+import { Instagram, Facebook } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,6 +19,27 @@ export default function Home() {
         reality. Together, we can achieve greatness! 🎶📝📷💻
       </p>
       <Accordion values={Services} />
+      <footer className="text-center flex flex-col gap-4 items-center text-cyan-200/90 mt-8 text-sm sm:text-lg">
+        <p className="mb-3">Terms and conditions apply*</p>
+        <div className="max-w-[400px] text-cyan-200/60 leading-4 border border-cyan-200/50 p-8 rounded-lg flex flex-col items-center text-sm sm:text-lg font-semibold ">
+          <h2 className="uppercase underline font-bold mb-2 text-lg text-cyan-200">
+            Reach out to us:
+          </h2>
+          <p className="mb-1">amythverseconnect@gmail.com</p>
+          <p className="mb-2">
+            <strong className="font-bold">Mob:</strong> +91 6290757405
+          </p>
+          <div className="flex justify-center">
+            <Link
+              href="https://www.instagram.com/amythverse/"
+              className="flex gap-2 items-center text-sm"
+            >
+              <Instagram className="w-5 h-5" /> Instagram
+            </Link>
+          </div>
+        </div>
+        <p className="mt-6">© 2023 Amythverse.</p>
+      </footer>
     </>
   );
 }
