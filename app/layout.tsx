@@ -9,7 +9,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Amythverse",
-  description: "Learning At Amythverse",
+  description:
+    "Where imagination becomes reality and creativity knows no bounds.",
 };
 
 export default function RootLayout({
