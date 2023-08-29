@@ -15,7 +15,10 @@ export default function MainTabs({ tabs, children, className }: MainTabsProps) {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <Tabs.Root className={cn("w-full", className)} defaultValue="Services">
+    <Tabs.Root
+      className={cn("w-full", className)}
+      defaultValue={pathname === "/" ? "Services" : "Courses"}
+    >
       <Tabs.List className="grid grid-cols-2 w-full shadow-xl shadow-gray-950/30 z-10">
         {tabs.map((tab) => (
           <Tabs.Trigger
