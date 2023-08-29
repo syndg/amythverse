@@ -28,15 +28,13 @@ export default function Accordion({
           key={index}
           className="p-3 bg-cyan-950/40 border-[1.3px] border-cyan-500/40 rounded-lg overflow-hidden data-[state=open]:border-cyan-500/80 transition-all duration-150"
         >
-          <AccordionTrigger className="w-full rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
-            <div className="flex justify-between items-center">
-              <span className="uppercase font-sans text-[14px] sm:text-[18px] font-bold data-[state=open]:font-extrabold">
-                {name}
-              </span>
-              <span className="p-[2px] bg-cyan-800/30 rounded-full">
-                <ChevronDown />
-              </span>
-            </div>
+          <AccordionTrigger className="w-full group flex justify-between items-center rounded-t-lg text-cyan-100/70 data-[state=open]:text-cyan-200 data-[state=closed]:rounded-lg transition-all duration-150">
+            <span className="uppercase font-sans text-[14px] sm:text-[18px] font-bold data-[state=open]:font-extrabold">
+              {name}
+            </span>
+            <span className="p-[2px] group-data-[state=open]:rotate-180 bg-cyan-800/30 rounded-full transition-all duration-200">
+              <ChevronDown className="w-5 h-5" />
+            </span>
           </AccordionTrigger>
           <AccordionContent className="pt-3 px-4 text-cyan-200/80 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp transition-all duration-200">
             <ul
