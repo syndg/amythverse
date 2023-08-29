@@ -14,11 +14,9 @@ interface MainTabsProps {
 export default function MainTabs({ tabs, children, className }: MainTabsProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const pathCondition = pathname === "/" ? "Services" : "Courses";
   return (
-    <Tabs.Root
-      className={cn("w-full", className)}
-      defaultValue={pathname === "/" ? "Services" : "Courses"}
-    >
+    <Tabs.Root className={cn("w-full", className)} defaultValue={pathCondition}>
       <Tabs.List className="grid grid-cols-2 w-full shadow-xl shadow-gray-950/30 z-10">
         {tabs.map((tab) => (
           <Tabs.Trigger
@@ -38,10 +36,7 @@ export default function MainTabs({ tabs, children, className }: MainTabsProps) {
           </Tabs.Trigger>
         ))}
       </Tabs.List>
-      <TabContent
-        value={pathname === "/" ? "Services" : "Courses"}
-        className="py-5 px-4"
-      >
+      <TabContent value={pathCondition} className="py-5 px-4">
         {children}
       </TabContent>
     </Tabs.Root>
