@@ -12,7 +12,6 @@ export const tabs = [
 export const Services = [
   {
     name: "Music Production",
-    content: "Dummy placeholder text here.",
     tabname: "music-production",
     listItems: [
       "Arrangement of your composition or cover track.",
@@ -23,7 +22,6 @@ export const Services = [
   },
   {
     name: "Songwriting & Composition",
-    content: "Dummy placeholder text here.",
     tabname: "songwriting",
     listItems: [
       "Give your lyrical idea a proper song structure.",
@@ -34,7 +32,6 @@ export const Services = [
   },
   {
     name: "Storytelling & Cinematography",
-    content: "Dummy placeholder text here.",
     tabname: "storytelling",
     listItems: [
       "Give your idea/music an attractive concept and storyline.",
@@ -45,7 +42,6 @@ export const Services = [
   },
   {
     name: "Photography",
-    content: "Dummy placeholder text here.",
     tabname: "photography",
     listItems: [
       "Fashion",
@@ -59,7 +55,6 @@ export const Services = [
   },
   {
     name: "Video Editing",
-    content: "Dummy placeholder text here.",
     tabname: "video-editing",
     listItems: [
       "From old school cinematic to modern style editing, we've got it all covered.",
@@ -72,7 +67,6 @@ export const Services = [
   },
   {
     name: "Web Design & Development",
-    content: "Dummy placeholder text here.",
     tabname: "web-design",
     listItems: [
       "Primary tech stack - React.js, NextJS, Planetscale, Prisma, TailwindCSS.",
@@ -88,12 +82,12 @@ export const Services = [
 export const Courses = [
   {
     name: "Music Production 101",
-    content: "Dummy placeholder text here.",
     tabname: "music-production-101",
     listItems: [
       "Understanding the Digital Audio Workstation (DAW).",
       "Arranging instruments and layers in your track.",
       "Basics of synthesis, sampling, sound design & processing.",
+      "Beat making, use of basslines, 808s and designing your own percussions to spice up your track.",
       "Exploring top industry level VST plugins and techniques.",
       "Vocal recording & production, processing harmonies and ad-libs.",
       "Tips and tricks used by top producers for a faster workflow & efficiency.",
@@ -103,7 +97,6 @@ export const Courses = [
   },
   {
     name: "Music Composition 101",
-    content: "Dummy placeholder text here.",
     tabname: "music-composition-101",
     listItems: [
       "Writing and structuring a song/soundtrack.",
@@ -115,7 +108,6 @@ export const Courses = [
   },
   {
     name: "Content Creator Package",
-    content: "Dummy placeholder text here.",
     tabname: "singer-songwriter-package",
     listItems: [
       "Unplugged instrument based production of your track.",
@@ -128,7 +120,6 @@ export const Courses = [
   },
   {
     name: "Modern Guitar",
-    content: "Dummy placeholder text here.",
     tabname: "guitar",
     listItems: [
       "Practices and exercisses for effective playing.",
@@ -141,7 +132,6 @@ export const Courses = [
   },
   {
     name: "Commercial Vocal",
-    content: "Dummy placeholder text here.",
     tabname: "vocal",
     listItems: [
       "Developing your vocal range & control through targetted vocal exercises.",
