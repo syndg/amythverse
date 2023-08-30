@@ -22,7 +22,7 @@ export default function Accordion({
       type="single"
       collapsible
     >
-      {values.map(({ name, content, tabname, listItems }, index) => (
+      {values.map(({ name, tabname, listItems }, index) => (
         <AccordionItem
           value={tabname}
           key={index}
