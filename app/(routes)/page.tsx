@@ -20,7 +20,7 @@ export default function Home() {
       </p>
       <Accordion values={Services} />
       <footer className="text-center flex flex-col gap-4 items-center text-cyan-200/90 mt-8 text-sm sm:text-lg">
-        <p className="mb-3">Terms and conditions apply*</p>
+        <p className="mb-3 text-xs sm:text-sm">Terms and conditions apply*</p>
         <div className="max-w-[400px] text-cyan-200/60 leading-4 border border-cyan-200/50 p-8 rounded-lg flex flex-col items-center text-sm sm:text-lg font-semibold ">
           <h2 className="uppercase underline font-bold mb-2 text-lg text-cyan-200">
             Reach out to us:
@@ -32,9 +32,10 @@ export default function Home() {
           <div className="flex justify-center">
             <Link
               href="https://www.instagram.com/amythverse/"
-              className="flex gap-2 items-center text-sm"
+              className="flex gap-1 items-center text-sm hover:text-cyan-200 transition-all duration-150"
             >
-              <Instagram className="w-5 h-5" /> Instagram
+              <Instagram className="w-5 h-5" />
+              Instagram
             </Link>
           </div>
         </div>

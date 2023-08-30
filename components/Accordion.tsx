@@ -36,10 +36,8 @@ export default function Accordion({
               <ChevronDown className="w-5 h-5" />
             </span>
           </AccordionTrigger>
-          <AccordionContent className="pt-3 px-4 text-cyan-200/80 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp transition-all duration-200">
-            <ul
-              className={`${poppins.className} list-disc text-[15px] sm:text-[18px]`}
-            >
+          <AccordionContent className="pt-3 px-4 text-cyan-200/70 rounded-b-lg data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp transition-all duration-200">
+            <ul className="list-disc text-[15px] sm:text-[18px]">
               {listItems?.map((item, index) => (
                 <li key={index} className="mb-2">
                   {item}
